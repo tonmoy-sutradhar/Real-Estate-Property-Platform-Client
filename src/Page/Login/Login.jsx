@@ -3,15 +3,15 @@ import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
 import { TbFidgetSpinner } from "react-icons/tb";
-import LoadingSpinner from "../../components/Shared/LoadingSpinner";
 import { saveUser } from "../../API/Utils";
+import Loading from "../../Components/Shared/Loading";
 
 const Login = () => {
   const { signIn, signInWithGoogle, loading, user } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const from = location?.state?.from?.pathname || "/";
-  if (loading) return <LoadingSpinner />;
+  if (loading) return <Loading></Loading>;
   if (user) return <Navigate to={from} replace={true} />;
   // form submit handler
   const handleSubmit = async (event) => {

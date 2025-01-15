@@ -5,6 +5,8 @@ import ErrorPage from "./../Page/ErrorPage";
 import Login from "../Page/Login/Login";
 import SignUp from "../Page/SignUp/SignUp";
 import DashboardLayout from "../Layout/DashboardLayout";
+import Profile from "../Page/Dashboard/Common/Profile";
+import Tonmoy from "../Components/TOnmoy.jsx/Tonmoy";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +34,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        // element:
+        element: <Tonmoy></Tonmoy>,
+      },
+      {
+        path: "profile",
+        element: <Profile></Profile>,
       },
     ],
   },
