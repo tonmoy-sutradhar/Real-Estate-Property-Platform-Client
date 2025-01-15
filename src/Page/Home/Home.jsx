@@ -1,10 +1,14 @@
 import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <div>
-      <Navbar></Navbar>
+      <Helmet>
+        <title> Property Platform | Buy Your Desired property</title>
+      </Helmet>
+      {/* <Navbar></Navbar> */}
     </div>
   );
 };
