@@ -4,19 +4,19 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import avatarImg from "../../../assets/images/placeholder.jpg";
-import logo from "../../../assets/images/logo-flat.png";
+import logo from "../../../assets/images/logo.jpg";
 const Navbar = () => {
   const { user, logOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed w-full bg-white z-10 shadow-sm">
+    <div className="fixed w-full bg-white z-10 shadow-sm opacity-85">
       <div className="py-4 border-b-[1px]">
         <Container>
           <div className="flex flex-row  items-center justify-between gap-3 md:gap-0">
             {/* Logo */}
             <Link to="/">
-              <img src={logo} alt="logo" width="100" height="100" />
+              <img src={logo} alt="logo" className="w-44 h-14 " />
             </Link>
             {/* Dropdown Menu */}
             <div className="relative">

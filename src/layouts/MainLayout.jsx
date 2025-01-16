@@ -5,10 +5,10 @@ const MainLayout = () => {
   return (
     <div className="bg-white">
       <Navbar></Navbar>
-      <div className="pt-24 min-h-[calc(100vh-68px)]">
+      <div className="pt-24 min-h-[calc(100vh-385px)]">
         <Outlet />
       </div>
-      <Footer />
+      <Footer></Footer>
     </div>
   );
 };
