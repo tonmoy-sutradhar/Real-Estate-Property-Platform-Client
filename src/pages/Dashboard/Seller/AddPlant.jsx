@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import AddPlantForm from "../../../components/Form/AddPlantForm";
-import { imageUpload } from "../../../api/utils";
 import useAuth from "../../../hooks/useAuth";
 import { useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { imageUpload } from "../../../API/Utils";
 
 const AddPlant = () => {
   const navigate = useNavigate();
@@ -63,7 +63,7 @@ const AddPlant = () => {
   return (
     <div>
       <Helmet>
-        <title>Add Plant | Dashboard</title>
+        <title>Add Property | Dashboard</title>
       </Helmet>
 
       {/* Form */}
