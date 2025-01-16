@@ -74,7 +74,7 @@ const Sidebar = () => {
             <nav>
               {/*  Menu Items */}
               {role === 'customer' && <CustomerMenu />}
-              {role === 'seller' && <SellerMenu />}
+              {role === 'agent' && <SellerMenu />}
               {role === 'admin' && <AdminMenu />}
             </nav>
           </div>

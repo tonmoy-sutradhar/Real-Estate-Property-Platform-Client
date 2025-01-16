@@ -1,188 +1,18 @@
-// import { Link, useNavigate } from "react-router-dom";
-// import { FcGoogle } from "react-icons/fc";
-// import useAuth from "../../hooks/useAuth";
-// import { toast } from "react-hot-toast";
-// import { TbFidgetSpinner } from "react-icons/tb";
-// import { imageUpload, saveUser } from "../../API/Utils";
-
-// const SignUp = () => {
-//   const { createUser, updateUserProfile, signInWithGoogle, loading } =
-//     useAuth();
-//   const navigate = useNavigate();
-//   // form submit handler
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
-//     const form = event.target;
-//     const name = form.name.value;
-//     const email = form.email.value;
-//     const password = form.password.value;
-//     const image = form.image.files[0];
-
-//     //1. send image data to imgbb
-//     const photoURL = await imageUpload(image);
-
-//     try {
-//       //2. User Registration
-//       const result = await createUser(email, password);
-
-//       //3. Save username & profile photo
-//       await updateUserProfile(name, photoURL);
-//       console.log(result);
-//       // save user info in db if the user is new
-//       await saveUser({ ...result?.user, displayName: name, photoURL });
-//       navigate("/");
-//       toast.success("Signup Successful");
-//     } catch (err) {
-//       console.log(err);
-//       toast.error(err?.message);
-//     }
-//   };
-
-//   // Handle Google Signin
-//   const handleGoogleSignIn = async () => {
-//     try {
-//       //User Registration using google
-//       const data = await signInWithGoogle();
-//       await saveUser(data?.user);
-//       navigate("/");
-//       toast.success("Signup Successful");
-//     } catch (err) {
-//       console.log(err);
-//       toast.error(err?.message);
-//     }
-//   };
-//   return (
-//     <div className="flex justify-center items-center min-h-screen bg-white">
-//       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
-//         <div className="mb-8 text-center">
-//           <h1 className="my-3 text-4xl font-bold">Sign Up</h1>
-//           <p className="text-sm text-gray-400">Welcome to PlantNet</p>
-//         </div>
-//         <form
-//           onSubmit={handleSubmit}
-//           noValidate=""
-//           action=""
-//           className="space-y-6 ng-untouched ng-pristine ng-valid"
-//         >
-//           <div className="space-y-4">
-//             <div>
-//               <label htmlFor="email" className="block mb-2 text-sm">
-//                 Name
-//               </label>
-//               <input
-//                 type="text"
-//                 name="name"
-//                 id="name"
-//                 placeholder="Enter Your Name Here"
-//                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-lime-500 bg-gray-200 text-gray-900"
-//                 data-temp-mail-org="0"
-//               />
-//             </div>
-//             <div>
-//               <label htmlFor="image" className="block mb-2 text-sm">
-//                 Select Image:
-//               </label>
-//               <input
-//                 required
-//                 type="file"
-//                 id="image"
-//                 name="image"
-//                 accept="image/*"
-//               />
-//             </div>
-//             <div>
-//               <label htmlFor="email" className="block mb-2 text-sm">
-//                 Email address
-//               </label>
-//               <input
-//                 type="email"
-//                 name="email"
-//                 id="email"
-//                 required
-//                 placeholder="Enter Your Email Here"
-//                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-lime-500 bg-gray-200 text-gray-900"
-//                 data-temp-mail-org="0"
-//               />
-//             </div>
-//             <div>
-//               <div className="flex justify-between">
-//                 <label htmlFor="password" className="text-sm mb-2">
-//                   Password
-//                 </label>
-//               </div>
-//               <input
-//                 type="password"
-//                 name="password"
-//                 autoComplete="new-password"
-//                 id="password"
-//                 required
-//                 placeholder="*******"
-//                 className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-lime-500 bg-gray-200 text-gray-900"
-//               />
-//             </div>
-//           </div>
-
-//           <div>
-//             <button
-//               type="submit"
-//               className="bg-lime-500 w-full rounded-md py-3 text-white"
-//             >
-//               {loading ? (
-//                 <TbFidgetSpinner className="animate-spin m-auto" />
-//               ) : (
-//                 "Continue"
-//               )}
-//             </button>
-//           </div>
-//         </form>
-//         <div className="flex items-center pt-4 space-x-1">
-//           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-//           <p className="px-3 text-sm dark:text-gray-400">
-//             Signup with social accounts
-//           </p>
-//           <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-//         </div>
-//         <div
-//           onClick={handleGoogleSignIn}
-//           className="flex justify-center items-center space-x-2 border m-3 p-2 border-gray-300 border-rounded cursor-pointer"
-//         >
-//           <FcGoogle size={32} />
-
-//           <p>Continue with Google</p>
-//         </div>
-//         <p className="px-6 text-sm text-center text-gray-400">
-//           Already have an account?{" "}
-//           <Link
-//             to="/login"
-//             className="hover:underline hover:text-lime-500 text-gray-600"
-//           >
-//             Login
-//           </Link>
-//           .
-//         </p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default SignUp;
-
-// -----------------my signup page
 import { Link, useNavigate } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../hooks/useAuth";
 import { toast } from "react-hot-toast";
-import { TbFidgetSpinner } from "react-icons/tb";
 import { imageUpload, saveUser } from "../../API/Utils";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoEyeSharp } from "react-icons/io5";
 import { useState } from "react";
+import img from "../../assets/images/signup-img.jpg";
 
 const SignUp = () => {
   const { createUser, updateUserProfile, signInWithGoogle, loading } =
     useAuth();
   const navigate = useNavigate();
-  // -----Registration -----------------
+
+  // -------------------------------Sign Up------------------------ -----------------
   const [err, setErr] = useState("");
   const [success, setSuccess] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -195,8 +25,7 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
     const image = form.image.files[0];
-    // const terms = form.get("terms");
-    const terms = form.elements.terms.checked; // For checkbox
+    const terms = form.elements.terms.checked;
     console.table({ name, email, password, image, terms });
 
     setErr("");
@@ -227,17 +56,15 @@ const SignUp = () => {
       return;
     }
 
-    // Image upload
+    // Image upload-------------->>
     const photoURL = await imageUpload(image);
 
     try {
-      // 1. User registration
       const result = await createUser(email, password);
 
-      // 2. Update user profile
       await updateUserProfile(name, photoURL);
 
-      // 3. Save user in the database
+      //--------------------------------- Save user in the database--------------------------
       await saveUser({
         email: result?.user?.email,
         displayName: name,
@@ -255,10 +82,9 @@ const SignUp = () => {
   // Handle Google Signin
   const handleGoogleSignIn = async () => {
     try {
-      // User registration using Google
       const result = await signInWithGoogle();
 
-      // Save user in the database
+      //--------------------------------- Save user in the database--------------------------
       await saveUser({
         email: result?.user?.email,
         displayName: result?.user?.displayName,
@@ -274,118 +100,6 @@ const SignUp = () => {
   };
 
   return (
-    // <div className="flex justify-center items-center min-h-screen bg-white">
-    //   <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900">
-    //     <div className="mb-8 text-center">
-    //       <h1 className="my-3 text-4xl font-bold">Sign Up</h1>
-    //       <p className="text-sm text-gray-400">Welcome to PlantNet</p>
-    //     </div>
-    //     <form
-    //       onSubmit={handleSubmit}
-    //       noValidate=""
-    //       action=""
-    //       className="space-y-6 ng-untouched ng-pristine ng-valid"
-    //     >
-    //       <div className="space-y-4">
-    //         <div>
-    //           <label htmlFor="email" className="block mb-2 text-sm">
-    //             Name
-    //           </label>
-    //           <input
-    //             type="text"
-    //             name="name"
-    //             id="name"
-    //             placeholder="Enter Your Name Here"
-    //             className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-lime-500 bg-gray-200 text-gray-900"
-    //             data-temp-mail-org="0"
-    //           />
-    //         </div>
-    //         <div>
-    //           <label htmlFor="image" className="block mb-2 text-sm">
-    //             Select Image:
-    //           </label>
-    //           <input
-    //             required
-    //             type="file"
-    //             id="image"
-    //             name="image"
-    //             accept="image/*"
-    //           />
-    //         </div>
-    //         <div>
-    //           <label htmlFor="email" className="block mb-2 text-sm">
-    //             Email address
-    //           </label>
-    //           <input
-    //             type="email"
-    //             name="email"
-    //             id="email"
-    //             required
-    //             placeholder="Enter Your Email Here"
-    //             className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-lime-500 bg-gray-200 text-gray-900"
-    //             data-temp-mail-org="0"
-    //           />
-    //         </div>
-    //         <div>
-    //           <div className="flex justify-between">
-    //             <label htmlFor="password" className="text-sm mb-2">
-    //               Password
-    //             </label>
-    //           </div>
-    //           <input
-    //             type="password"
-    //             name="password"
-    //             autoComplete="new-password"
-    //             id="password"
-    //             required
-    //             placeholder="*******"
-    //             className="w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-lime-500 bg-gray-200 text-gray-900"
-    //           />
-    //         </div>
-    //       </div>
-
-    //       <div>
-    //         <button
-    //           type="submit"
-    //           className="bg-lime-500 w-full rounded-md py-3 text-white"
-    //         >
-    //           {loading ? (
-    //             <TbFidgetSpinner className="animate-spin m-auto" />
-    //           ) : (
-    //             "Continue"
-    //           )}
-    //         </button>
-    //       </div>
-    //     </form>
-    //     <div className="flex items-center pt-4 space-x-1">
-    //       <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-    //       <p className="px-3 text-sm dark:text-gray-400">
-    //         Signup with social accounts
-    //       </p>
-    //       <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-    //     </div>
-    //     <div
-    //       onClick={handleGoogleSignIn}
-    //       className="flex justify-center items-center space-x-2 border m-3 p-2 border-gray-300 border-rounded cursor-pointer"
-    //     >
-    //       <FcGoogle size={32} />
-
-    //       <p>Continue with Google</p>
-    //     </div>
-    //     <p className="px-6 text-sm text-center text-gray-400">
-    //       Already have an account?{" "}
-    //       <Link
-    //         to="/login"
-    //         className="hover:underline hover:text-lime-500 text-gray-600"
-    //       >
-    //         Login
-    //       </Link>
-    //       .
-    //     </p>
-    //   </div>
-    // </div>
-
-    // New --------------------
     <div className="px-4 pt-9">
       <div className="flex h-full items-center justify-center md:p-0">
         <div className="flex h-full w-full overflow-hidden rounded-xl shadow-md">
@@ -395,11 +109,10 @@ const SignUp = () => {
             <div className="absolute -right-7 top-[50%] h-14 w-14 -translate-y-1/2 rounded-full bg-gradient-to-br from-white via-blue-300 to-blue-400 transition-all"></div>
             <div className="absolute left-[50%] top-[22%] h-24 w-24 -translate-x-1/2 rounded-full bg-gradient-to-br from-white via-blue-300 to-blue-400"></div>
             <div className="z-10 space-y-2 text-center">
-              {/* <h2 className="text-5xl font-medium text-blue-500/80">
-                Welcome{" "}
-              </h2> */}
+              <h2 className="text-5xl font-medium text-black">Welcome</h2>
+              <h1 className="text-gray-600">Real State Property Platform</h1>
 
-              {/* <img src="gg" alt="Image" /> */}
+              <img className="w-40 h-40 rounded-full" src={img} alt="Image" />
             </div>
           </div>
 
