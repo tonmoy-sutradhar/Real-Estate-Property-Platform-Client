@@ -18,7 +18,7 @@ const Profile = () => {
           src={cvrImg}
           className="w-96 mx-auto  mb-4 rounded-t-lg h-52"
         />
-        <div className="flex flex-col items-center justify-center p-4 border-2  border-blue-500 -mt-16">
+        <div className="flex flex-col items-center justify-center p-4 border-2  border-purple-500 -mt-16">
           <a href="#" className="relative block">
             <img
               alt="profile"
@@ -47,10 +47,10 @@ const Profile = () => {
               </p>
 
               <div>
-                <button className="bg-lime-500 px-10 py-1 rounded-lg text-black cursor-pointer hover:bg-lime-800 block mb-1">
+                <button className="bg-purple-500 px-10 py-1 rounded-lg text-white cursor-pointer hover:bg-lime-800 block mb-1">
                   Update Profile
                 </button>
-                <button className="bg-lime-500 px-7 py-1 rounded-lg text-black cursor-pointer hover:bg-lime-800">
+                <button className="bg-purple-500 px-7 py-1 rounded-lg text-white cursor-pointer hover:bg-lime-800">
                   Change Password
                 </button>
               </div>
