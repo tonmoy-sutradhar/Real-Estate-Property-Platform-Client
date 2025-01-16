@@ -202,7 +202,7 @@ const SignUp = () => {
               onClick={() => {
                 handleGoogleSignIn()
                   .then(() => {
-                    toast.success("Google login successful");
+                    // toast.success("Google login successful");
                     navigate("/");
                   })
                   .catch((error) => {
