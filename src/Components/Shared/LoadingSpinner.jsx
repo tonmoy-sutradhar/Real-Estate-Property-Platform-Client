@@ -1,22 +1,18 @@
-import PropTypes from 'prop-types'
-import { ScaleLoader } from 'react-spinners'
+import { DNA } from "react-loader-spinner";
 
-const LoadingSpinner = ({ smallHeight }) => {
+const LoadingSpinner = () => {
   return (
-    <div
-      className={` ${smallHeight ? 'h-[250px]' : 'h-[70vh]'}
-      flex 
-      flex-col 
-      justify-center 
-      items-center `}
-    >
-      <ScaleLoader size={100} color='lime' />
+    <div className="flex items-center justify-center w-full min-h-[calc(100vh-305px)]">
+      <DNA
+        visible={true}
+        height="80"
+        width="80"
+        ariaLabel="dna-loading"
+        wrapperStyle={{}}
+        wrapperClass="dna-wrapper"
+      />
     </div>
-  )
-}
+  );
+};
 
-LoadingSpinner.propTypes = {
-  smallHeight: PropTypes.bool,
-}
-
-export default LoadingSpinner
+export default LoadingSpinner;
