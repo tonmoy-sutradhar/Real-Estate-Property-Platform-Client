@@ -101,7 +101,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import avatarImg from "../../../assets/images.png";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/logo.jpg";
 const Navbar = () => {
   const { user, logOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
@@ -115,9 +115,11 @@ const Navbar = () => {
             <Link to="/">
               <img src={logo} alt="logo" width="100" height="100" />
             </Link>
+
             {/* Dropdown Menu */}
             <div className="relative">
               <div className="flex flex-row items-center gap-3">
+                <h1>{user?.displayName}</h1>
                 {/* Dropdown btn */}
                 <div
                   onClick={() => setIsOpen(!isOpen)}

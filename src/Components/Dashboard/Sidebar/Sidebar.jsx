@@ -11,7 +11,7 @@ import AdminMenu from "./Menu/AdminMenu";
 import { Link } from "react-router-dom";
 import SellerMenu from "./Menu/SellerMenu";
 import CustomerMenu from "./Menu/CustomerMenu";
-import logo from "../../../assets/3.jpg";
+import logo from "../../../assets/images.png";
 const Sidebar = () => {
   const { logOut } = useAuth();
   const [isActive, setActive] = useState(false);
@@ -60,8 +60,8 @@ const Sidebar = () => {
                   // className='hidden md:block'
                   src={logo}
                   alt="logo"
-                  width="100"
-                  height="100"
+                  width="90"
+                  height="50"
                 />
               </Link>
             </div>
