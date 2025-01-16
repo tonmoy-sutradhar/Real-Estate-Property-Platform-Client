@@ -3,16 +3,16 @@ import useRole from '../hooks/useRole'
 import LoadingSpinner from '../components/Shared/LoadingSpinner'
 import { Navigate } from 'react-router-dom'
 
-const AdminRoute = ({ children }) => {
+const SellerRoute = ({ children }) => {
   const [role, isLoading] = useRole()
 
   if (isLoading) return <LoadingSpinner />
-  if (role === 'admin') return children
+  if (role === 'seller') return children
   return <Navigate to='/dashboard' replace='true' />
 }
 
-AdminRoute.propTypes = {
+SellerRoute.propTypes = {
   children: PropTypes.element,
 }
 
-export default AdminRoute
+export default SellerRoute

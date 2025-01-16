@@ -1,4 +1,5 @@
 import axios from "axios";
+// Upload image and return image url
 
 export const imageUpload = async (imageData) => {
   const formData = new FormData();
@@ -10,25 +11,10 @@ export const imageUpload = async (imageData) => {
   return data.data.display_url;
 };
 
-// export const saveUser = async (user) => {
-//   axios.post(`${import.meta.env.VITE_API_URL}/users/${currentUser?.email}`, {
-//     name: currentUser?.displayName,
-//     image: currentUser?.photoURL,
-//     email: currentUser?.email,
-//   });
-// };
-
-// help chatgpt
 export const saveUser = async (user) => {
-  // try {
-  //   await axios.post(`${import.meta.env.VITE_API_URL}/users/${user.email}`, {
-  //     name: user.displayName,
-  //     image: user.photoURL,
-  //     email: user.email,
-  //   });
-  //   console.log("User saved successfully!");
-  // } catch (error) {
-  //   console.error("Error saving user:", error);
-  //   throw error; // Re-throw the error to be handled by the caller
-  // }
+  await axios.post(`${import.meta.env.VITE_API_URL}/users/${user?.email}`, {
+    name: user?.displayName,
+    image: user?.photoURL,
+    email: user?.email,
+  });
 };
