@@ -18,7 +18,7 @@ const Profile = () => {
           src={cvrImg}
           className="w-96 mx-auto  mb-4 rounded-t-lg h-52"
         />
-        <div className="flex flex-col items-center justify-center p-4 border-2  border-purple-500 -mt-16">
+        <div className="flex flex-col items-center justify-center p-4 border-2 rounded-xl  border-purple-500 -mt-16">
           <a href="#" className="relative block">
             <img
               alt="profile"
@@ -27,7 +27,7 @@ const Profile = () => {
             />
           </a>
 
-          <p className="p-2 px-4 text-xs text-white bg-lime-500 rounded-full">
+          <p className="p-2 px-4 text-xs text-white bg-blue-500 rounded-full">
             {role}
           </p>
           <p className="mt-2 text-xl font-medium text-gray-800 ">

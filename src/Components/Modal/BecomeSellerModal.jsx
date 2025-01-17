@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import {
   Dialog,
   Transition,
@@ -7,6 +6,7 @@ import {
   DialogPanel,
 } from "@headlessui/react";
 import { Fragment } from "react";
+
 const BecomeSellerModal = ({ closeModal, isOpen, requestHandler }) => {
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -20,11 +20,11 @@ const BecomeSellerModal = ({ closeModal, isOpen, requestHandler }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black bg-opacity-25" />
+          <div className="fixed inset-0 bg-black bg-opacity-40" />
         </TransitionChild>
 
         <div className="fixed inset-0 overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="flex min-h-full items-center justify-center p-6 text-center">
             <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
@@ -34,32 +34,32 @@ const BecomeSellerModal = ({ closeModal, isOpen, requestHandler }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <DialogPanel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <DialogPanel className="w-full max-w-lg transform overflow-hidden rounded-3xl bg-white p-8 text-left align-middle shadow-2xl transition-all">
                 <DialogTitle
-                  as="h3"
-                  className="text-lg font-medium text-center leading-6 text-gray-900"
+                  as="h2"
+                  className="text-xl font-bold text-center leading-6 text-gray-900"
                 >
-                  Become A Agent!
+                  Become an Agent
                 </DialogTitle>
-                <div className="mt-2">
-                  <p className="text-sm text-gray-500">
-                    Please read all the terms & conditions before becoming a
-                    agent.
+                <div className="mt-4">
+                  <p className="text-base text-gray-600 text-center">
+                    Please carefully review the terms & conditions before
+                    applying to become an agent.
                   </p>
                 </div>
-                <hr className="mt-8 " />
-                <div className="flex mt-2 justify-around">
+                <div className="mt-6 border-t border-gray-300"></div>
+                <div className="flex mt-6 justify-center gap-4">
                   <button
                     onClick={requestHandler}
                     type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-green-100 px-4 py-2 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+                    className="px-6 py-2.5 text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     Send Request
                   </button>
                   <button
                     type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-red-100 px-4 py-2 text-sm font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                     onClick={closeModal}
+                    className="px-6 py-2.5 text-sm font-medium text-gray-700 bg-gray-200 hover:bg-gray-300 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
                   >
                     Cancel
                   </button>
@@ -71,13 +71,6 @@ const BecomeSellerModal = ({ closeModal, isOpen, requestHandler }) => {
       </Dialog>
     </Transition>
   );
-};
-
-BecomeSellerModal.propTypes = {
-  modalHandler: PropTypes.func,
-  closeModal: PropTypes.func,
-  requestHandler: PropTypes.func,
-  isOpen: PropTypes.bool,
 };
 
 export default BecomeSellerModal;
