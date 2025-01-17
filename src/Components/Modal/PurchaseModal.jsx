@@ -26,7 +26,7 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
       email: user?.email,
       image: user?.photoURL,
     },
-    plantId: _id,
+    propertyId: _id,
     price: totalPrice,
     quantity: totalQuantity,
     agent: agent?.email,
