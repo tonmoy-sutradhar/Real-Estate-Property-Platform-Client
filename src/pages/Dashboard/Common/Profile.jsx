@@ -8,7 +8,7 @@ const Profile = () => {
   const [role, isLoading] = useRole();
   if ((loading, isLoading)) return <LoadingSpinner />;
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center mt-16">
       <Helmet>
         <title>Profile</title>
       </Helmet>
@@ -34,17 +34,16 @@ const Profile = () => {
             User Id: {user.uid}
           </p>
           <div className="w-full p-2 mt-4 rounded-lg">
-            <div className="flex flex-wrap items-center justify-between text-sm text-gray-600 ">
-              <p className="flex flex-col">
-                Name
-                <span className="font-bold text-black ">
-                  {user.displayName}
-                </span>
-              </p>
-              <p className="flex flex-col">
-                Email
-                <span className="font-bold text-black ">{user.email}</span>
-              </p>
+            <div className="flex flex-wrap items-center justify-between text-sm text-gray-600 px-12">
+              <div>
+                <p>
+                  Name: <span className="font-bold">{user.displayName}</span>
+                </p>
+                <p>
+                  Email:{" "}
+                  <span className="font-bold text-blue-500 ">{user.email}</span>
+                </p>
+              </div>
 
               <div>
                 <button className="bg-purple-500 px-10 py-1 rounded-lg text-white cursor-pointer hover:bg-lime-800 block mb-1">
