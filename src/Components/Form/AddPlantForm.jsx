@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { TbFidgetSpinner } from "react-icons/tb";
 import { shortImageName } from "../../utilities";
 
@@ -9,42 +8,45 @@ const AddPlantForm = ({
   loading,
 }) => {
   return (
-    <div className="w-full min-h-[calc(100vh-40px)] flex flex-col justify-center items-center text-gray-800 rounded-xl bg-gray-50">
+    <div className="w-full min-h-[calc(100vh-40px)] border-2 border-purple-500 flex flex-col justify-center items-center text-gray-800 rounded-xl bg-gray-50">
+      <h1 className="text-4xl font-bold text-purple-500 mb-11 border-b-4">
+        Add Property
+      </h1>
+
       <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 ">
           <div className="space-y-6">
-            {/* Name */}
+            {/* Property Title */}
             <div className="space-y-1 text-sm">
               <label htmlFor="name" className="block text-gray-600">
                 Property Title
               </label>
               <input
                 className="w-full px-4 py-3 text-gray-800 border border-lime-300 focus:outline-lime-500 rounded-md bg-white"
-                name="name"
-                id="name"
+                name="title"
+                id="title"
                 type="text"
                 placeholder="Property title"
                 required
               />
             </div>
-            {/* Category */}
+
+            {/* Property location */}
             <div className="space-y-1 text-sm">
               <label htmlFor="category" className="block text-gray-600 ">
-                Category
+                Property location
               </label>
-              <select
+              <input
+                className="w-full px-4 py-3 text-gray-800 border border-lime-300 focus:outline-lime-500 rounded-md bg-white"
+                name="location"
+                id="location"
+                type="text"
+                placeholder="Property title"
                 required
-                className="w-full px-4 py-3 border-lime-300 focus:outline-lime-500 rounded-md bg-white"
-                name="category"
-              >
-                <option value="Indoor">Indoor</option>
-                <option value="Outdoor">Outdoor</option>
-                <option value="Succulent">Succulent</option>
-                <option value="Flowering">Flowering</option>
-              </select>
+              />
             </div>
             {/* Description */}
-            <div className="space-y-1 text-sm">
+            {/* <div className="space-y-1 text-sm">
               <label htmlFor="description" className="block text-gray-600">
                 Description
               </label>
@@ -55,7 +57,7 @@ const AddPlantForm = ({
                 className="block rounded-md focus:lime-300 w-full h-32 px-4 py-3 text-gray-800  border border-lime-300 bg-white focus:outline-lime-500 "
                 name="description"
               ></textarea>
-            </div>
+            </div> */}
           </div>
           <div className="space-y-6 flex flex-col">
             {/* Price & Quantity */}
@@ -70,13 +72,13 @@ const AddPlantForm = ({
                   name="price"
                   id="price"
                   type="number"
-                  placeholder="Price per unit"
+                  placeholder="Price of Property"
                   required
                 />
               </div>
 
               {/* Quantity */}
-              <div className="space-y-1 text-sm">
+              {/* <div className="space-y-1 text-sm">
                 <label htmlFor="quantity" className="block text-gray-600">
                   Quantity
                 </label>
@@ -88,7 +90,7 @@ const AddPlantForm = ({
                   placeholder="Available quantity"
                   required
                 />
-              </div>
+              </div> */}
             </div>
             {/* Image */}
             <div className=" p-4  w-full  m-auto rounded-lg flex-grow">
@@ -109,7 +111,7 @@ const AddPlantForm = ({
                       accept="image/*"
                       hidden
                     />
-                    <div className="bg-lime-500 text-white border border-gray-300 rounded font-semibold cursor-pointer p-1 px-3 hover:bg-lime-500">
+                    <div className="bg-purple-500 text-white border border-gray-300 rounded font-semibold cursor-pointer p-1 px-3 hover:bg-purple-700">
                       {/* {uploadImage?.image?.name} */}
                       {shortImageName(uploadImage?.image)}
                     </div>
@@ -123,30 +125,23 @@ const AddPlantForm = ({
                 <p>Image Size: {uploadImage?.image?.size} Bytes</p>
               </div>
             )}
-
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full p-3 mt-5 text-center font-medium text-white transition duration-200 rounded shadow-md bg-lime-500 "
-            >
-              {loading ? (
-                <TbFidgetSpinner className="animate-spin m-auto" />
-              ) : (
-                "Save & Continue"
-              )}
-            </button>
           </div>
+          {/* Submit Button */}
+
+          <button
+            type="submit"
+            className="w-full p-3 -mt-8 text-center font-medium text-white   transition duration-200 rounded shadow-md bg-purple-500 hover:bg-purple-700"
+          >
+            {loading ? (
+              <TbFidgetSpinner className="animate-spin m-auto" />
+            ) : (
+              "Add property"
+            )}
+          </button>
         </div>
       </form>
     </div>
   );
-};
-
-AddPlantForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  setUploadImage: PropTypes.func.isRequired,
-  uploadImage: PropTypes.object,
-  loading: PropTypes.bool,
 };
 
 export default AddPlantForm;

@@ -12,7 +12,7 @@ const AddPlant = () => {
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
   const [uploadImage, setUploadImage] = useState({
-    image: { name: "Upload Button" },
+    image: { name: "Upload Image" },
   });
   console.log(uploadImage);
   const [loading, setLoading] = useState(false);
@@ -21,11 +21,9 @@ const AddPlant = () => {
     e.preventDefault();
     setLoading(true);
     const form = e.target;
-    const name = form.name.value;
-    const description = form.description.value;
-    const category = form.category.value;
+    const title = form.title.value;
+    const location = form.location.value;
     const price = parseFloat(form.price.value);
-    const quantity = parseInt(form.quantity.value);
     const image = form.image.files[0];
     const imageUrl = await imageUpload(image);
 
@@ -38,11 +36,9 @@ const AddPlant = () => {
 
     // Create plant data object
     const plantData = {
-      name,
-      category,
-      description,
+      title,
+      location,
       price,
-      quantity,
       image: imageUrl,
       agent,
     };
