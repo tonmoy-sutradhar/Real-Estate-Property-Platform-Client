@@ -4,7 +4,7 @@ import { FcSettings } from "react-icons/fc";
 import { AiOutlineBars } from "react-icons/ai";
 import { IoMdLogOut } from "react-icons/io";
 import MenuItem from "./Menu/MenuItem";
-
+import { RiLuggageCartLine } from "react-icons/ri";
 import useAuth from "../../../hooks/useAuth";
 
 import AdminMenu from "./Menu/AdminMenu";
@@ -27,7 +27,7 @@ const Sidebar = () => {
       {/* Small Screen Navbar */}
       <div className="bg-gray-100 text-gray-800 flex justify-between md:hidden">
         <div>
-          <div className="block cursor-pointer p-4 font-bold">
+          {/* <div className="block cursor-pointer p-4 font-bold">
             <Link to="/">
               <img
                 // className='hidden md:block'
@@ -37,7 +37,7 @@ const Sidebar = () => {
                 height="100"
               />
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <button
@@ -56,13 +56,13 @@ const Sidebar = () => {
       >
         <div>
           <div>
-            <div className="w-full hidden md:flex px-4 py-2 shadow-lg rounded-lg justify-center items-center  mx-auto">
+            <div className="w-full hidden md:flex  shadow-lg rounded-lg justify-center items-center  mx-auto">
               <Link to="/">
                 <img
                   // className='hidden md:block'
                   src={logo}
                   alt="logo"
-                  className=" h-16 w-[900px]"
+                  className=" h-16 w-[900px] rounded-lg"
                 />
               </Link>
             </div>

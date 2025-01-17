@@ -21,25 +21,6 @@ const MyOrders = () => {
     },
   });
 
-  // help cgt
-  // const {
-  //   data: orders = [],
-  //   isLoading,
-  //   refetch,
-  // } = useQuery({
-  //   queryKey: ["orders", user?.email],
-  //   queryFn: async () => {
-  //     if (!user?.email) {
-  //       console.error("User email is missing!");
-  //       return [];
-  //     }
-  //     // /customer-orders/:email
-  //     const { data } = await axiosSecure.get(`/customer-orders/${user?.email}`);
-  //     console.log("Fetched orders:", data);
-  //     return data;
-  //   },
-  // });
-
   console.log(user.email);
   console.log(orders);
 
