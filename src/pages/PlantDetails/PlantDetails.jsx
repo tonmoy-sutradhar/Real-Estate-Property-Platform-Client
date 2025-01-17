@@ -9,7 +9,7 @@ import axios from "axios";
 import LoadingSpinner from "../../components/Shared/LoadingSpinner";
 import useRole from "../../hooks/useRole";
 import useAuth from "../../hooks/useAuth";
-import Container from "../../Components/Shared/Container";
+import Container from "../../components/Shared/Container";
 const PlantDetails = () => {
   const [role] = useRole();
   const { user } = useAuth();
@@ -32,13 +32,13 @@ const PlantDetails = () => {
     setIsOpen(false);
   };
 
-  const { category, description, image, price, name, agent, quantity } = plant;
+  const { title, location, image, price, agent } = plant;
   if (isLoading) return <LoadingSpinner />;
   return (
     <Container>
       {" "}
       <Helmet>
-        <title>Money Plant</title>
+        <title>Property details</title>
       </Helmet>
       <div className="mx-auto flex flex-col lg:flex-row justify-between w-full gap-12">
         {/* Header */}
@@ -53,27 +53,27 @@ const PlantDetails = () => {
             </div>
           </div>
         </div>
-        <div className="md:gap-10 flex-1">
-          {/* Plant Info */}
-          <Heading title={name} subtitle={`Category: ${category}`} />
-          <hr className="my-6" />
-          <div
-            className="
-      text-lg font-light text-neutral-500"
-          >
-            {description}
-          </div>
-          <hr className="my-6" />
+        <div className="md:gap-10 flex-1 mt-48">
+          {/* <Heading title={name} subtitle={`Title: ${title}`} />
+        
+        <div
+          className="
+    text-lg font-light text-neutral-500"
+        >
+          Location: {location}
+        </div> */}
 
+          <div className="text-2xl font-bold mb-3">Title: {title}</div>
+          <div className="text-2xl font-bold mb-3">Location: {location}</div>
           <div
             className="
-            text-xl 
-            font-semibold 
-            flex 
-            flex-row 
-            items-center
-            gap-2
-          "
+          text-xl 
+          font-semibold 
+          flex 
+          flex-row 
+          items-center 
+          gap-2
+        "
           >
             <div>Agent: {agent?.name}</div>
 
@@ -86,31 +86,29 @@ const PlantDetails = () => {
               src={agent?.image}
             />
           </div>
-          <hr className="my-6" />
-          <div>
-            <p
-              className="
-            gap-4 
-            font-light
-            text-neutral-500
-          "
-            >
-              Quantity: {quantity} Units Left Only!
-            </p>
-          </div>
+          {/* <hr className="my-6" /> */}
+          {/* <div>
+          <p
+            className="
+          gap-4 
+          font-light
+          text-neutral-500
+        "
+          >
+            Quantity: {quantity} Units Left Only!
+          </p>
+        </div> */}
           <hr className="my-6" />
           <div className="flex justify-between">
             <p className="font-bold text-3xl text-gray-500">Price: {price}$</p>
             <div>
               <Button
                 disabled={
-                  !user ||
-                  user?.email === agent?.email ||
-                  role != "customer" ||
-                  quantity === 0
+                  !user || user?.email === agent?.email || role != "customer"
                 }
                 onClick={() => setIsOpen(true)}
-                label={quantity > 0 ? "Purchase" : "Out Of Stock"}
+                // label={quantity > 0 ? "Purchase" : "Out Of Stock"}
+                label={"Purchase"}
               />
             </div>
           </div>

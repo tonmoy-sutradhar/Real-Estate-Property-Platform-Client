@@ -20,7 +20,29 @@ const MyOrders = () => {
       return data;
     },
   });
+
+  // help cgt
+  // const {
+  //   data: orders = [],
+  //   isLoading,
+  //   refetch,
+  // } = useQuery({
+  //   queryKey: ["orders", user?.email],
+  //   queryFn: async () => {
+  //     if (!user?.email) {
+  //       console.error("User email is missing!");
+  //       return [];
+  //     }
+  //     // /customer-orders/:email
+  //     const { data } = await axiosSecure.get(`/customer-orders/${user?.email}`);
+  //     console.log("Fetched orders:", data);
+  //     return data;
+  //   },
+  // });
+
+  console.log(user.email);
   console.log(orders);
+
   if (isLoading) return <LoadingSpinner />;
   return (
     <>
@@ -44,13 +66,13 @@ const MyOrders = () => {
                       scope="col"
                       className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"
                     >
-                      Name
+                      Title
                     </th>
                     <th
                       scope="col"
                       className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"
                     >
-                      Category
+                      Location
                     </th>
                     <th
                       scope="col"
@@ -58,12 +80,7 @@ const MyOrders = () => {
                     >
                       Price
                     </th>
-                    <th
-                      scope="col"
-                      className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"
-                    >
-                      Quantity
-                    </th>
+
                     <th
                       scope="col"
                       className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal"

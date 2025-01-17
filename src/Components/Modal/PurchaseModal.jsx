@@ -8,17 +8,17 @@ import {
 } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import Button from "../Shared/Button/Button";
-import useAuth from "../../hooks/useAuth";
 import { toast } from "react-hot-toast";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
   const navigate = useNavigate();
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
-  const { category, price, name, agent, quantity, _id } = plant;
-  const [totalQuantity, setTotalQuantity] = useState(1);
+  const { title, price, location, agent, _id } = plant;
+  // const [totalQuantity, setTotalQuantity] = useState(1);
   const [totalPrice, setTotalPrice] = useState(price);
   const [purchaseInfo, setPurchaseInfo] = useState({
     customer: {
@@ -28,27 +28,27 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
     },
     propertyId: _id,
     price: totalPrice,
-    quantity: totalQuantity,
+    // quantity: totalQuantity,
     agent: agent?.email,
     address: "",
     status: "Pending",
   });
 
-  const handleQuantity = (value) => {
-    if (value > quantity) {
-      setTotalQuantity(quantity);
-      return toast.error("Quantity exceeds available stock!");
-    }
-    if (value < 0) {
-      setTotalQuantity(1);
-      return toast.error("Quantity cannot be less than 1");
-    }
-    setTotalQuantity(value);
-    setTotalPrice(value * price);
-    setPurchaseInfo((prv) => {
-      return { ...prv, quantity: value, price: value * price };
-    });
-  };
+  // const handleQuantity = (value) => {
+  //   if (value > quantity) {
+  //     setTotalQuantity(quantity);
+  //     return toast.error("Quantity exceeds available stock!");
+  //   }
+  //   if (value < 0) {
+  //     setTotalQuantity(1);
+  //     return toast.error("Quantity cannot be less than 1");
+  //   }
+  //   setTotalQuantity(value);
+  //   setTotalPrice(value * price);
+  //   setPurchaseInfo((prv) => {
+  //     return { ...prv, quantity: value, price: value * price };
+  //   });
+  // };
   const handlePurchase = async () => {
     // Do something
     console.table(purchaseInfo);
@@ -56,10 +56,11 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
     try {
       // Save data in db
       await axiosSecure.post("/order", purchaseInfo);
+      //   quantityToUpdate: totalQuantity,
+      //   status: "decrease",
       // decrease quantity from plant collection
       await axiosSecure.patch(`/plants/quantity/${_id}`, {
-        quantityToUpdate: totalQuantity,
-        status: "decrease",
+        //  TODO
       });
       toast.success("Order Successful!");
       refetch();
@@ -101,13 +102,13 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
                   as="h3"
                   className="text-lg font-medium text-center leading-6 text-gray-900"
                 >
-                  Review Info Before Purchase
+                  Check All the information
                 </DialogTitle>
                 <div className="mt-2">
-                  <p className="text-sm text-gray-500">Plant: {name}</p>
+                  <p className="text-sm text-gray-500">Title: {title}</p>
                 </div>
                 <div className="mt-2">
-                  <p className="text-sm text-gray-500">Category: {category}</p>
+                  <p className="text-sm text-gray-500">Location: {location}</p>
                 </div>
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">
@@ -118,13 +119,13 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">Price: $ {price}</p>
                 </div>
-                <div className="mt-2">
+                {/* <div className="mt-2">
                   <p className="text-sm text-gray-500">
                     Available Quantity: {quantity}
                   </p>
-                </div>
+                </div> */}
                 {/* Quantity input field */}
-                <div className="space-x-2 mt-2 text-sm">
+                {/* <div className="space-x-2 mt-2 text-sm">
                   <label htmlFor="quantity" className=" text-gray-600">
                     Quantity:
                   </label>
@@ -138,7 +139,7 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
                     placeholder="Available quantity"
                     required
                   />
-                </div>
+                </div> */}
                 {/* Address input field */}
                 <div className="space-x-2 mt-2 text-sm">
                   <label htmlFor="address" className=" text-gray-600">
