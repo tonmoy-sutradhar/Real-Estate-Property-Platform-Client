@@ -16,7 +16,7 @@ const SellerMenu = () => {
       />
       <MenuItem
         icon={MdOutlineManageHistory}
-        label="Manage Orders"
+        label="My sold property"
         address="manage-orders"
       />
     </>
