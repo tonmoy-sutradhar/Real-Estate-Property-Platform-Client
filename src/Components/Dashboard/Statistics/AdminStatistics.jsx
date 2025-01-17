@@ -5,9 +5,9 @@ import { BsFillCartPlusFill, BsFillHouseDoorFill } from "react-icons/bs";
 const AdminStatistics = () => {
   return (
     <div>
-      <div className="mt-12">
+      <div className="mt-12 border-2 border-purple-500 pt-7">
         {/* small cards */}
-        <div className="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 flex-grow">
+        <div className="mb-12 grid  gap-y-10 gap-x-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 flex-grow">
           {/* Sales Card */}
           <div className="relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 shadow-md">
             <div

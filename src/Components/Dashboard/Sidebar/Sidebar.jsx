@@ -27,17 +27,9 @@ const Sidebar = () => {
       {/* Small Screen Navbar */}
       <div className="bg-gray-100 text-gray-800 flex justify-between md:hidden">
         <div>
-          {/* <div className="block cursor-pointer p-4 font-bold">
-            <Link to="/">
-              <img
-                // className='hidden md:block'
-                src={logo}
-                alt="logo"
-                width="100"
-                height="100"
-              />
-            </Link>
-          </div> */}
+          <Link to="/">
+            <img src={logo} alt="logo" className=" h-16 w-36 rounded-2xl" />
+          </Link>
         </div>
 
         <button

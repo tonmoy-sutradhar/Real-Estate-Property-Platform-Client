@@ -1,10 +1,10 @@
-import Container from "../Container";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import avatarImg from "../../../assets/images/placeholder.jpg";
 import logo from "../../../assets/images/logo.jpg";
+import Container from "../Container";
 const Navbar = () => {
   const { user, logOut } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +19,9 @@ const Navbar = () => {
               <img src={logo} alt="logo" className="w-44 h-14 " />
             </Link>
             {/* Dropdown Menu */}
+            <Link className="font-bold text-purple-700" to="/all-property">
+              All Properties
+            </Link>
             <div className="relative">
               <div className="flex flex-row items-center gap-3">
                 <h1 className="text-blue-500">{user?.displayName}</h1>
