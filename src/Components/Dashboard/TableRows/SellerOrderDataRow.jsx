@@ -7,7 +7,7 @@ const SellerOrderDataRow = ({ orderData, refetch }) => {
   const axiosSecure = useAxiosSecure();
   let [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
-  const { name, customer, price, quantity, address, _id, status, propertyId } =
+  const { title, customer, price, address, _id, status, propertyId } =
     orderData || {};
 
   // handle order delete/cancellation
@@ -50,7 +50,7 @@ const SellerOrderDataRow = ({ orderData, refetch }) => {
   return (
     <tr>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-        <p className="text-gray-900 whitespace-no-wrap">{name}</p>
+        <p className="text-gray-900 whitespace-no-wrap">{title}</p>
       </td>
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <p className="text-gray-900 whitespace-no-wrap">{customer?.email}</p>
@@ -58,9 +58,7 @@ const SellerOrderDataRow = ({ orderData, refetch }) => {
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <p className="text-gray-900 whitespace-no-wrap">${price}</p>
       </td>
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-        <p className="text-gray-900 whitespace-no-wrap">{quantity}</p>
-      </td>
+
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <p className="text-gray-900 whitespace-no-wrap">{address}</p>
       </td>

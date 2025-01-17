@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Fragment, useState } from "react";
 import {
   Dialog,
@@ -131,15 +130,6 @@ const UpdateUserModal = ({ setIsOpen, isOpen, role, updateRole }) => {
       </Dialog>
     </Transition>
   );
-};
-
-UpdateUserModal.propTypes = {
-  user: PropTypes.object,
-  modalHandler: PropTypes.func,
-  setIsOpen: PropTypes.func,
-  updateRole: PropTypes.func,
-  isOpen: PropTypes.bool,
-  role: PropTypes.string,
 };
 
 export default UpdateUserModal;
