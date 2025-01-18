@@ -43,6 +43,14 @@ const Card = ({ plant }) => {
         <div className="flex flex-row items-center gap-1">
           <div className="font-semibold">Price: {price}$</div>
         </div>
+        <div>
+          <Link
+            className="bg-purple-500 text-white px-3 pb-1 rounded-xl"
+            to={`/review/${_id}`}
+          >
+            Review
+          </Link>
+        </div>
       </div>
     </Link>
   );

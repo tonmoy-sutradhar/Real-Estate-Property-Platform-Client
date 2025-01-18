@@ -301,7 +301,7 @@ const Login = () => {
           </button>
           <p className="text-sm text-center text-gray-600 mt-2 mb-3">
             Don’t Have An Account ?{" "}
-            <Link to="/registration" className="text-blue-500 text-xl">
+            <Link to="/signup" className="text-blue-500 text-xl">
               Registers
             </Link>
           </p>

@@ -18,6 +18,7 @@ import SellerRoute from "./SellerRoute";
 import AdminRoute from "./AdminRoute";
 import Plants from "../components/Home/Plants";
 import AddedPlants from "../components/Dashboard/Statistics/AddedPlants";
+import Review from "../pages/ReviewSection/Review";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
             <Plants></Plants>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/review/:id",
+        element: <Review></Review>,
       },
     ],
   },
