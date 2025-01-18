@@ -19,6 +19,7 @@ import AdminRoute from "./AdminRoute";
 import Plants from "../components/Home/Plants";
 import AddedPlants from "../components/Dashboard/Statistics/AddedPlants";
 import Review from "../pages/ReviewSection/Review";
+import MyReview from "../pages/Dashboard/Customer/MyReview";
 
 export const router = createBrowserRouter([
   {
@@ -121,6 +122,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyOrders />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "my-review",
+        element: (
+          <PrivateRoute>
+            <MyReview></MyReview>
           </PrivateRoute>
         ),
       },

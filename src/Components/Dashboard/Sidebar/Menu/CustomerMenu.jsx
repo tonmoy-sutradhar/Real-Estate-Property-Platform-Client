@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import BecomeSellerModal from "../../../Modal/BecomeSellerModal";
 import { RiLuggageCartLine } from "react-icons/ri";
 import { MdOutlineSupportAgent } from "react-icons/md";
+import { MdRateReview } from "react-icons/md";
 const CustomerMenu = () => {
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
@@ -39,6 +40,7 @@ const CustomerMenu = () => {
         label="My Orders"
         address="my-orders"
       />
+      <MenuItem icon={MdRateReview} label="My Review" address="my-review" />
 
       <button
         onClick={() => setIsOpen(true)}

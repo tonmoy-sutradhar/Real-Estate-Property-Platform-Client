@@ -1,14 +1,14 @@
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb7OfLC7ojOfb6n7ayxSGQWFBShobg6h13gQ&s" alt="Logo" width="80" height="80" />
 
-# Product Recommendation System Website || Assignment-11-(Category-9)
+# Real Estate Property Platform(ELITE PROPERTY) || Assignment-12-(Category-001)
 
 ## Live Link
 
-- [Product Recommendation System ](https://product-recommendation-s-a2da4.web.app/)
+- [Real Estate Property Platform(ELITE PROPERTY) ](https://real-estate-property-platform.web.app)
 
 ## Website Details
 
-- Product Recommendation Platform
+- Real Estate Property Platform(ELITE PROPERTY)
 
 This platform allows users to collaborate and explore product alternatives through queries and recommendations. Users can add, update, delete, and view queries, as well as provide and manage recommendations for various products. It features dynamic navigation, responsive design, and secure authentication using Firebase and JWT. The platform includes search functionality, toggling grid layouts, and interactive UI inspired by Envato and similar themes. Backend services are powered by Node.js, Express.js, and MongoDB, with deployment on Vercel. All sensitive credentials are secured via environment variables, ensuring a safe and robust application experience.
 

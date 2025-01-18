@@ -23,7 +23,7 @@ const MyInventory = () => {
   return (
     <>
       <Helmet>
-        <title>My Inventory</title>
+        <title>My Added Properties</title>
       </Helmet>
       <div className="container mx-auto px-4 sm:px-8 border-2 border-purple-500 rounded-xl">
         <div className="py-8">
