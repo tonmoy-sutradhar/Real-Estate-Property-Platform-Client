@@ -30,6 +30,7 @@ const Navbar = () => {
             <div className="relative">
               <div className="flex flex-row items-center gap-3">
                 <h1 className="text-blue-500">{user?.displayName}</h1>
+
                 {/* Dropdown btn */}
                 <div
                   onClick={() => setIsOpen(!isOpen)}
