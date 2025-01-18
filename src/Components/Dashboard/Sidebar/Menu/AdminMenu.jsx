@@ -5,11 +5,12 @@ import { MdHomeWork } from "react-icons/md";
 const AdminMenu = () => {
   return (
     <>
-      <MenuItem icon={BsGraphUp} label="Statistics" address="/dashboard" />
+      {/* <MenuItem icon={BsGraphUp} label="Statistics" address="/dashboard" /> */}
       <MenuItem
         icon={MdHomeWork}
         label="Added properties"
-        address="adminAddedProperty"
+        address="/dashboard"
+        // address="adminAddedProperty"
       />
       <MenuItem icon={FaUserCog} label="Manage Users" address="manage-users" />
     </>

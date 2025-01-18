@@ -1,8 +1,8 @@
 import { useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import toast from "react-hot-toast";
-import DeleteModal from "../../Modal/DeleteModal";
-import UpdatePlantModal from "../../Modal/UpdatePlantModal";
+// import DeleteModal from "../../Modal/DeleteModal";
+// import UpdatePlantModal from "../../Modal/UpdatePlantModal";
 
 const AdminAddedproperty = ({ refetch, plant }) => {
   const axiosSecure = useAxiosSecure();
@@ -19,18 +19,18 @@ const AdminAddedproperty = ({ refetch, plant }) => {
   }
   const { image, title, location, price, _id } = plant || {};
 
-  const handlePlantDelete = async () => {
-    try {
-      await axiosSecure.delete(`/plants/${_id}`);
-      toast.success("Plant successfully removed.");
-      refetch();
-    } catch (err) {
-      console.log(err);
-      toast.error(err.response.data);
-    } finally {
-      closeModal();
-    }
-  };
+  // const handlePlantDelete = async () => {
+  //   try {
+  //     await axiosSecure.delete(`/plants/${_id}`);
+  //     toast.success("Plant successfully removed.");
+  //     refetch();
+  //   } catch (err) {
+  //     console.log(err);
+  //     toast.error(err.response.data);
+  //   } finally {
+  //     closeModal();
+  //   }
+  // };
 
   return (
     <tr>
@@ -56,7 +56,7 @@ const AdminAddedproperty = ({ refetch, plant }) => {
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <p className="text-gray-900 whitespace-no-wrap">${price}</p>
       </td>
-
+      {/* 
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <span
           onClick={openModal}
@@ -73,8 +73,8 @@ const AdminAddedproperty = ({ refetch, plant }) => {
           isOpen={isOpen}
           closeModal={closeModal}
         />
-      </td>
-      <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+      </td> */}
+      {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <span
           onClick={() => setIsEditModalOpen(true)}
           className="relative cursor-pointer inline-block px-3 py-1 font-semibold text-black leading-tight"
@@ -89,7 +89,7 @@ const AdminAddedproperty = ({ refetch, plant }) => {
           isOpen={isEditModalOpen}
           setIsEditModalOpen={setIsEditModalOpen}
         />
-      </td>
+      </td> */}
     </tr>
   );
 };

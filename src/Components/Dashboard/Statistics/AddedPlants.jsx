@@ -24,7 +24,7 @@ const AddedPlants = () => {
   return (
     <>
       <Helmet>
-        <title>My Inventory</title>
+        <title>Properties</title>
       </Helmet>
       <div className="container mx-auto px-4 sm:px-8 border-2 border-purple-500 rounded-xl">
         <div className="py-8">
@@ -58,7 +58,7 @@ const AddedPlants = () => {
                       Price
                     </th>
 
-                    <th
+                    {/* <th
                       scope="col"
                       className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-bold"
                     >
@@ -69,7 +69,7 @@ const AddedPlants = () => {
                       className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-bold"
                     >
                       Update
-                    </th>
+                    </th> */}
                   </tr>
                 </thead>
                 <tbody>

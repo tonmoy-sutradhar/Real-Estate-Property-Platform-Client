@@ -50,21 +50,21 @@ export const router = createBrowserRouter([
       </PrivateRoute>
     ),
     children: [
+      // {
+      //   index: true,
+      //   element: (
+      //     <PrivateRoute>
+      //       <Statistics />
+      //       {/* <AdminAddedproperty></AdminAddedproperty> */}
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
+        // path: "adminAddedProperty",
         index: true,
         element: (
           <PrivateRoute>
-            <Statistics />
-            {/* <AdminAddedproperty></AdminAddedproperty> */}
-          </PrivateRoute>
-        ),
-      },
-      {
-        path: "adminAddedProperty",
-        element: (
-          <PrivateRoute>
             <AdminRoute>
-              {/* <AdminAddedproperty></AdminAddedproperty> */}
               <AddedPlants></AddedPlants>
             </AdminRoute>
           </PrivateRoute>
