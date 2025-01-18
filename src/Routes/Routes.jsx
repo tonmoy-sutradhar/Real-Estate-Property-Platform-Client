@@ -17,6 +17,8 @@ import MyOrders from "../pages/Dashboard/Customer/MyOrders";
 import SellerRoute from "./SellerRoute";
 import AdminRoute from "./AdminRoute";
 import Plants from "../components/Home/Plants";
+import AdminAddedproperty from "../components/Dashboard/TableRows/AdminAddedproperty";
+import AddedPlants from "../components/Dashboard/Statistics/AddedPlants";
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +55,18 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Statistics />
+            {/* <AdminAddedproperty></AdminAddedproperty> */}
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "adminAddedProperty",
+        element: (
+          <PrivateRoute>
+            <AdminRoute>
+              {/* <AdminAddedproperty></AdminAddedproperty> */}
+              <AddedPlants></AddedPlants>
+            </AdminRoute>
           </PrivateRoute>
         ),
       },

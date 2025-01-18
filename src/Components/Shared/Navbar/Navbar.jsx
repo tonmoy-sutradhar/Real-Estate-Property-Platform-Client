@@ -19,9 +19,14 @@ const Navbar = () => {
               <img src={logo} alt="logo" className="w-44 h-14 " />
             </Link>
             {/* Dropdown Menu */}
-            <Link className="font-bold text-purple-700" to="/all-property">
+
+            <Link
+              className="font-bold mr-[820px] bg-purple-500 text-white px-2 py-1 rounded-lg"
+              to="/all-property"
+            >
               All Properties
             </Link>
+
             <div className="relative">
               <div className="flex flex-row items-center gap-3">
                 <h1 className="text-blue-500">{user?.displayName}</h1>

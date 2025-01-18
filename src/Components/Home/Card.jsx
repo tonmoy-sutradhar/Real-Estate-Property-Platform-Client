@@ -5,9 +5,9 @@ const Card = ({ plant }) => {
   return (
     <Link
       to={`/plant/${_id}`}
-      className="col-span-1 cursor-pointer group shadow-xl p-3 rounded-xl"
+      className="col-span-1 cursor-pointer group shadow-xl p-3 rounded-xl border-2 border-purple-500"
     >
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-2 w-full ">
         <div
           className="
               aspect-square 

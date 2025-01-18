@@ -14,6 +14,9 @@ const Plants = () => {
   if (isLoading) return <LoadingSpinner />;
   return (
     <Container>
+      <h1 className="text-4xl font-bold text-center text-purple-500 border-b-4 pb-1 ">
+        FIND AND EXPLORE YOUR BEST PROPERTY
+      </h1>
       <div className="mb-10">
         {plants && plants.length > 0 ? (
           // sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6

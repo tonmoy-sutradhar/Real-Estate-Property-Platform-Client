@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import banner from "../../assets/images/banner.jpg";
 
 const Banner = () => {
@@ -17,7 +18,7 @@ const Banner = () => {
         </p>
         <div className="mt-6 flex justify-center space-x-4">
           <button className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-700">
-            Start Exploring
+            <Link to="/all-property"> Start Exploring</Link>
           </button>
           <button className="bg-white text-purple-600 px-6 py-3 rounded-lg shadow-md border border-purple-600 hover:bg-purple-50">
             Get Funding
