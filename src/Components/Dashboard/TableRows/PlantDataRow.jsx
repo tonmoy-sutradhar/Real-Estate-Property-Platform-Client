@@ -26,7 +26,7 @@ const PlantDataRow = ({ refetch, plant }) => {
       toast.success("Plant successfully removed.");
       refetch();
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       toast.error(err.response.data);
     } finally {
       closeModal();

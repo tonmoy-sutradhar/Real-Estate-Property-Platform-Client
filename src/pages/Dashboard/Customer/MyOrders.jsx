@@ -21,8 +21,8 @@ const MyOrders = () => {
     },
   });
 
-  console.log(user.email);
-  console.log(orders);
+  // console.log(user.email);
+  // console.log(orders);
 
   if (isLoading) return <LoadingSpinner />;
   return (

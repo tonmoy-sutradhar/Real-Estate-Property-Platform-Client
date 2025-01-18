@@ -14,7 +14,7 @@ const AddPlant = () => {
   const [uploadImage, setUploadImage] = useState({
     image: { name: "Upload Image" },
   });
-  console.log(uploadImage);
+  // console.log(uploadImage);
   const [loading, setLoading] = useState(false);
   // handle form submit
   const handleSubmit = async (e) => {
@@ -51,7 +51,7 @@ const AddPlant = () => {
       toast.success("Data Added Successfully!");
       navigate("/dashboard/my-inventory");
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     } finally {
       setLoading(false);
     }

@@ -19,7 +19,7 @@ const AddedPlants = () => {
       return data;
     },
   });
-  console.log(plants);
+  // console.log(plants);
   if (isLoading) return <LoadingSpinner />;
   return (
     <>

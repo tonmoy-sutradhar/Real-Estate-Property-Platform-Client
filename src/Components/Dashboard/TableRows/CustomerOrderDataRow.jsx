@@ -7,7 +7,7 @@ const CustomerOrderDataRow = ({ orderData, refetch }) => {
   let [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
   const { title, image, location, price, _id, status, propertyId } = orderData;
-  console.log(orderData);
+  // console.log(orderData);
 
   // handle order delete/cancellation
   const handleDelete = async () => {
@@ -23,7 +23,7 @@ const CustomerOrderDataRow = ({ orderData, refetch }) => {
       refetch();
       toast.success("Order Cancelled.");
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       toast.error(err.response.data);
     } finally {
       closeModal();
@@ -62,7 +62,7 @@ const CustomerOrderDataRow = ({ orderData, refetch }) => {
       <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
         <button
           onClick={() => setIsOpen(true)}
-          className="relative disabled:cursor-not-allowed cursor-pointer inline-block px-3 py-1 font-semibold text-black leading-tight"
+          className="relative disabled:cursor-not-allowed cursor-pointer inline-block px-4 py-1 font-semibold text-black leading-tight"
         >
           <span className="absolute cursor-pointer inset-0 bg-red-500  rounded-full"></span>
           <span className="relative cursor-pointer">Cancel</span>

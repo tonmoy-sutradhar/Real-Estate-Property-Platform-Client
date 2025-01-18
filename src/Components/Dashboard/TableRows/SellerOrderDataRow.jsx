@@ -24,7 +24,7 @@ const SellerOrderDataRow = ({ orderData, refetch }) => {
       refetch();
       toast.success("Order Cancelled.");
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       toast.error(err.response.data);
     } finally {
       closeModal();
@@ -43,7 +43,7 @@ const SellerOrderDataRow = ({ orderData, refetch }) => {
       refetch();
       toast.success("Status Updated");
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       toast.error(err.response.data);
     }
   };

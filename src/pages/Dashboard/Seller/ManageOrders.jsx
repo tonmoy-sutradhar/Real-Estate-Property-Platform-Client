@@ -20,7 +20,7 @@ const ManageOrders = () => {
       return data;
     },
   });
-  console.log(orders);
+  // console.log(orders);
 
   if (isLoading) return <LoadingSpinner />;
   return (

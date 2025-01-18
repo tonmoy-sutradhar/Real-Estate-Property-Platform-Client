@@ -19,7 +19,7 @@ const UserDataRow = ({ userData, refetch }) => {
       refetch();
     } catch (err) {
       toast.error(err?.response?.data);
-      console.log(err);
+      // console.log(err);
     } finally {
       setIsOpen(false);
     }

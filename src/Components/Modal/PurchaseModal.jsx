@@ -66,7 +66,7 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
       refetch();
       navigate("/dashboard/my-orders");
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     } finally {
       closeModal();
     }
