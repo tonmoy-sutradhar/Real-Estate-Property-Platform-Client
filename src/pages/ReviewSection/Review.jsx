@@ -49,9 +49,9 @@ const Review = () => {
     const name = user?.displayName;
 
     // Bid user validation
-    // if (user?.email === agent?.email) {
-    //   return toast.error("Action not permitted.");
-    // }
+    if (user?.email === agent?.email) {
+      return toast.error("Action not permitted.");
+    }
 
     const recommendData = {
       name,
