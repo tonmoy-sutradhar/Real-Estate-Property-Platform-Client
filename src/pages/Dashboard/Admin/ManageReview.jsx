@@ -19,7 +19,6 @@ const ManageReview = () => {
       const { data } = await axiosSecure.get(`/all-review`);
       return data;
     },
-    // enabled: !!user?.email,
   });
 
   return (

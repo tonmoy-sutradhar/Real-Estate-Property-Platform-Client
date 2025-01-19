@@ -4,7 +4,6 @@ const UpdatePlantForm = () => {
       <form>
         <div className="grid grid-cols-1 gap-10">
           <div className="space-y-6">
-            {/* Name */}
             <div className="space-y-1 text-sm">
               <label htmlFor="name" className="block text-gray-600">
                 Title
@@ -19,7 +18,6 @@ const UpdatePlantForm = () => {
               />
             </div>
 
-            {/* Location */}
             <div className="space-y-1 text-sm">
               <label htmlFor="description" className="block text-gray-600">
                 Location
@@ -52,7 +50,6 @@ const UpdatePlantForm = () => {
                 />
               </div>
             </div>
-            {/* Image */}
             <div className=" p-4  w-full  m-auto rounded-lg flex-grow">
               <div className="file_upload px-5 py-3 relative border-4 border-dotted border-gray-300 rounded-lg">
                 <div className="flex flex-col w-max mx-auto text-center">
@@ -73,7 +70,6 @@ const UpdatePlantForm = () => {
               </div>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full p-3 mt-5 text-center font-medium text-white transition duration-200 rounded shadow-md bg-purple-500 "

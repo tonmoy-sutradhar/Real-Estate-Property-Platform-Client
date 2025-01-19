@@ -1,8 +1,5 @@
-import { BsFingerprint } from "react-icons/bs";
-import { GrUserAdmin } from "react-icons/gr";
 import MenuItem from "./MenuItem";
 import { useState } from "react";
-// import BecomeSellerModal from '../../../Modal/BecomeSellerModal'
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import useAuth from "../../../../hooks/useAuth";
 import toast from "react-hot-toast";
@@ -21,9 +18,7 @@ const CustomerMenu = () => {
 
   const requestHandler = async () => {
     try {
-      // send a request to server
       const { data } = await axiosSecure.patch(`/users/${user?.email}`);
-      // console.log(data);
       toast.success("Successfully Applied to become a Agent");
     } catch (err) {
       // console.log(err.response.data);

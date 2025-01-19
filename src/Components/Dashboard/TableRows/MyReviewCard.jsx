@@ -35,7 +35,7 @@ const MyReviewCard = ({ recomm, refetch }) => {
   };
   return (
     <>
-      <div className="flex  justify-center w-full border-4 border-blue-500 items-center rounded-lg my-3 p-3">
+      <div className="flex  justify-center w-full border-2 border-blue-500 items-center rounded-lg my-3 p-3">
         <div className="w-[100%] lg:w-[10%] mr-9">
           <img className="w-full " src={propertyImage} alt="" />
         </div>

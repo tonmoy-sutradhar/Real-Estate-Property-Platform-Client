@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useState } from "react";
 import DeleteModal from "../../Modal/DeleteModal";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
@@ -99,11 +98,6 @@ const SellerOrderDataRow = ({ orderData, refetch }) => {
       </td>
     </tr>
   );
-};
-
-SellerOrderDataRow.propTypes = {
-  orderData: PropTypes.object,
-  refetch: PropTypes.func,
 };
 
 export default SellerOrderDataRow;

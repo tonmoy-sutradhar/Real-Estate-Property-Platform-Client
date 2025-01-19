@@ -24,27 +24,9 @@ const MyReview = () => {
 
   return (
     <>
-      <div>
+      <div className="border-2 border-purple-500 rounded-xl">
         <div className="overflow-x-auto px-3 mt-10 ">
           <table className="w-full shadow-md border mx-auto border-gray-100 my-6">
-            {/* <thead>
-              <tr className="bg-[#0095FF] text-white">
-                <th className="py-4 px-6 text-lg text-left border-b">
-                  Recommend Image
-                </th>
-                <th className="py-4 px-6 text-lg text-left border-b">
-                  Recommend Product Name
-                </th>
-                <th className="py-4 px-6 text-lg text-left border-b">
-                  Recommend reason
-                </th>
-                <th className="py-4 px-6 text-lg text-left border-b">
-                  Actual Product Name
-                </th>
-                <th className="py-4 px-6 text-lg text-left border-b">Date</th>
-                <th className="py-4 px-6 text-lg border-b text-end">Action</th>
-              </tr>
-            </thead> */}
             <tbody>
               {recommend.map((recomm, indx) => (
                 <MyReviewCard

@@ -34,31 +34,11 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
     status: "Pending",
   });
 
-  // const handleQuantity = (value) => {
-  //   if (value > quantity) {
-  //     setTotalQuantity(quantity);
-  //     return toast.error("Quantity exceeds available stock!");
-  //   }
-  //   if (value < 0) {
-  //     setTotalQuantity(1);
-  //     return toast.error("Quantity cannot be less than 1");
-  //   }
-  //   setTotalQuantity(value);
-  //   setTotalPrice(value * price);
-  //   setPurchaseInfo((prv) => {
-  //     return { ...prv, quantity: value, price: value * price };
-  //   });
-  // };
   const handlePurchase = async () => {
-    // Do something
-    console.table(purchaseInfo);
-    // post request to db
+    // console.table(purchaseInfo);
     try {
       // Save data in db
       await axiosSecure.post("/order", purchaseInfo);
-      //   quantityToUpdate: totalQuantity,
-      //   status: "decrease",
-      // decrease quantity from plant collection
       await axiosSecure.patch(`/plants/quantity/${_id}`, {
         //  TODO
       });
@@ -119,27 +99,7 @@ const PurchaseModal = ({ closeModal, isOpen, plant, refetch }) => {
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">Price: $ {price}</p>
                 </div>
-                {/* <div className="mt-2">
-                  <p className="text-sm text-gray-500">
-                    Available Quantity: {quantity}
-                  </p>
-                </div> */}
-                {/* Quantity input field */}
-                {/* <div className="space-x-2 mt-2 text-sm">
-                  <label htmlFor="quantity" className=" text-gray-600">
-                    Quantity:
-                  </label>
-                  <input
-                    value={totalQuantity}
-                    onChange={(e) => handleQuantity(parseInt(e.target.value))}
-                    className=" p-2 text-gray-800 border border-lime-300 focus:outline-lime-500 rounded-md bg-white"
-                    name="quantity"
-                    id="quantity"
-                    type="number"
-                    placeholder="Available quantity"
-                    required
-                  />
-                </div> */}
+
                 {/* Address input field */}
                 <div className="space-x-2 mt-2 text-sm">
                   <label htmlFor="address" className=" text-gray-600">

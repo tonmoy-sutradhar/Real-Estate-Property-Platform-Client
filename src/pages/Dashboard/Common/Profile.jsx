@@ -35,7 +35,7 @@ const Profile = () => {
           </p>
           <div className="w-full p-2 mt-4 rounded-lg">
             <div className="flex flex-wrap items-center justify-between text-sm text-gray-600 px-12">
-              <div>
+              <div className="ml-44">
                 <p>
                   Name: <span className="font-bold">{user.displayName}</span>
                 </p>
@@ -45,14 +45,14 @@ const Profile = () => {
                 </p>
               </div>
 
-              <div>
+              {/* <div>
                 <button className="bg-purple-500 px-10 py-1 rounded-lg text-white cursor-pointer hover:bg-lime-800 block mb-1">
                   Update Profile
                 </button>
                 <button className="bg-purple-500 px-7 py-1 rounded-lg text-white cursor-pointer hover:bg-lime-800">
                   Change Password
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

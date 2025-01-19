@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import LoadingSpinner from "../../../components/Shared/LoadingSpinner";
-import PlantDataRow from "../../../Components/Dashboard/TableRows/PlantDataRow";
 import AdminAddedproperty from "../TableRows/AdminAddedproperty";
 
 const AddedPlants = () => {
@@ -19,7 +18,6 @@ const AddedPlants = () => {
       return data;
     },
   });
-  // console.log(plants);
   if (isLoading) return <LoadingSpinner />;
   return (
     <>
@@ -57,19 +55,6 @@ const AddedPlants = () => {
                     >
                       Price
                     </th>
-
-                    {/* <th
-                      scope="col"
-                      className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-bold"
-                    >
-                      Delete
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-bold"
-                    >
-                      Update
-                    </th> */}
                   </tr>
                 </thead>
                 <tbody>

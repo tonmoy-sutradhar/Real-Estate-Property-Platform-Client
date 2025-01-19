@@ -1,8 +1,6 @@
 import { useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import toast from "react-hot-toast";
-// import DeleteModal from "../../Modal/DeleteModal";
-// import UpdatePlantModal from "../../Modal/UpdatePlantModal";
 
 const AdminAddedproperty = ({ refetch, plant }) => {
   const axiosSecure = useAxiosSecure();

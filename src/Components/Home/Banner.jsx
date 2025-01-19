@@ -3,9 +3,6 @@ import banner from "../../assets/images/banner.jpg";
 
 const Banner = () => {
   return (
-    // <div>
-    //   <h1 className="text-5xl text-blue-500 text-center">Banner section </h1>
-    // </div>
     <div className="bg-gray-50 md:flex items-center justify-between md:-mt-2">
       <div className="text-center">
         <h1 className="text-4xl font-extrabold text-gray-900">
