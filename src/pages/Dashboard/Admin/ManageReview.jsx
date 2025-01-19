@@ -4,7 +4,7 @@ import useAuth from "../../../hooks/useAuth";
 import MyReviewCard from "../../../components/Dashboard/TableRows/MyReviewCard";
 import { useQuery } from "@tanstack/react-query";
 
-const MyReview = () => {
+const ManageReview = () => {
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
 
@@ -14,12 +14,12 @@ const MyReview = () => {
     error,
     refetch,
   } = useQuery({
-    queryKey: ["all-reviews", user?.email],
+    queryKey: ["all-reviews"],
     queryFn: async () => {
-      const { data } = await axiosSecure.get(`/all-review/${user?.email}`);
+      const { data } = await axiosSecure.get(`/all-review`);
       return data;
     },
-    enabled: !!user?.email,
+    // enabled: !!user?.email,
   });
 
   return (
@@ -27,24 +27,6 @@ const MyReview = () => {
       <div>
         <div className="overflow-x-auto px-3 mt-10 ">
           <table className="w-full shadow-md border mx-auto border-gray-100 my-6">
-            {/* <thead>
-              <tr className="bg-[#0095FF] text-white">
-                <th className="py-4 px-6 text-lg text-left border-b">
-                  Recommend Image
-                </th>
-                <th className="py-4 px-6 text-lg text-left border-b">
-                  Recommend Product Name
-                </th>
-                <th className="py-4 px-6 text-lg text-left border-b">
-                  Recommend reason
-                </th>
-                <th className="py-4 px-6 text-lg text-left border-b">
-                  Actual Product Name
-                </th>
-                <th className="py-4 px-6 text-lg text-left border-b">Date</th>
-                <th className="py-4 px-6 text-lg border-b text-end">Action</th>
-              </tr>
-            </thead> */}
             <tbody>
               {recommend.map((recomm, indx) => (
                 <MyReviewCard
@@ -61,4 +43,4 @@ const MyReview = () => {
   );
 };
 
-export default MyReview;
+export default ManageReview;

@@ -24,7 +24,7 @@ const Review = () => {
   const fetchJobData = async () => {
     // const { data } = await axiosSecure.get(`/all-quires/${id}`);
     try {
-      const { data } = await axiosSecure.get(`/all-quires/${id}`);
+      const { data } = await axiosSecure.get(`/all-property/${id}`);
       setJob(data);
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -68,9 +68,9 @@ const Review = () => {
     console.table(recommendData);
 
     try {
-      await axiosSecure.post("/add-recommended", recommendData);
+      await axiosSecure.post("/add-review", recommendData);
+      navi("/dashboard/my-review");
       form.reset();
-      // navi("/myRecommended");
       toast.success("Review added Successful!!");
     } catch (err) {
       // console.log(err);

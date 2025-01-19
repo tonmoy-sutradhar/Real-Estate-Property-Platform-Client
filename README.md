@@ -1,4 +1,4 @@
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb7OfLC7ojOfb6n7ayxSGQWFBShobg6h13gQ&s" alt="Logo" width="80" height="80" />
+<img src="https://t3.ftcdn.net/jpg/04/98/99/70/360_F_498997006_MttmE3SKeZ3N54k7YzfIOvbIGWNrYVWu.jpg" alt="Logo" width="80" height="80" />
 
 # Real Estate Property Platform(ELITE PROPERTY) || Assignment-12-(Category-001)
 

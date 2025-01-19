@@ -21,7 +21,7 @@ const Navbar = () => {
             {/* Dropdown Menu */}
 
             <Link
-              className="font-bold mr-[820px] bg-purple-500 text-white px-2 py-1 rounded-lg"
+              className="md:font-bold md:mr-[820px] bg-purple-500 text-white sm:text-sm px-2 md:py-1 rounded-lg"
               to="/all-property"
             >
               All Properties

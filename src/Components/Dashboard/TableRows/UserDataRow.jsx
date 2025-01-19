@@ -1,5 +1,4 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { toast } from "react-hot-toast";
 import UpdateUserModal from "../../Modal/UpdateUserModal";
@@ -67,11 +66,6 @@ const UserDataRow = ({ userData, refetch }) => {
       </td>
     </tr>
   );
-};
-
-UserDataRow.propTypes = {
-  userData: PropTypes.object,
-  refetch: PropTypes.func,
 };
 
 export default UserDataRow;

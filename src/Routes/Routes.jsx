@@ -20,6 +20,7 @@ import Plants from "../components/Home/Plants";
 import AddedPlants from "../components/Dashboard/Statistics/AddedPlants";
 import Review from "../pages/ReviewSection/Review";
 import MyReview from "../pages/Dashboard/Customer/MyReview";
+import ManageReview from "../pages/Dashboard/Admin/ManageReview";
 
 export const router = createBrowserRouter([
   {
@@ -105,6 +106,16 @@ export const router = createBrowserRouter([
           <PrivateRoute>
             <AdminRoute>
               <ManageUsers />
+            </AdminRoute>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "manage-review",
+        element: (
+          <PrivateRoute>
+            <AdminRoute>
+              <ManageReview></ManageReview>
             </AdminRoute>
           </PrivateRoute>
         ),
