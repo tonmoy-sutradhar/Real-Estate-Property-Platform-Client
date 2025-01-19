@@ -63,7 +63,7 @@ const Login = () => {
           <h1 className="mt-28 bottom-3 right-3 text-right text-xl font-semibold text-white">
             Hey! <br /> Welcome to
             <br />
-            Product Recommendation System
+            Real Estate Property Platform
           </h1>
           <span className="absolute -left-8 -top-8 z-20 h-32 w-32 rounded-full bg-blue-800/20 duration-500 group-hover:h-56 group-hover:w-56"></span>
           <span className="absolute -left-5 -top-5 z-10 h-36 w-36 rounded-full bg-blue-800/50"></span>

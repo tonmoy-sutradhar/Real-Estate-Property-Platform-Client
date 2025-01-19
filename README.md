@@ -21,60 +21,100 @@ This platform allows users to collaborate and explore product alternatives throu
 <p align="center">
   <strong>Home Page</strong>  
   <br>
-  <img src="https://i.ibb.co.com/YQPL1sG/Screenshot-1070.png" alt="Home Page" width="80%" />
+  <img src="https://i.ibb.co.com/WDyhvcX/Screenshot-1165.png" alt="Home Page" width="80%" />
 </p>
 
 <p align="center">
   <strong>Same Home Page</strong>  
   <br>
-  <img src="https://i.ibb.co.com/rsQqtt1/Screenshot-1071.png" alt="Home Page" width="80%" />
+  <img src="https://i.ibb.co.com/mFdBQQF/Screenshot-1166.png" alt="Home Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>All Quires Page</strong>  
+  <strong>All Property Page</strong>  
   <br>
-  <img src="https://i.ibb.co.com/wwLtnhn/Screenshot-1072.png" alt="All Sports Equipment Page" width="80%" />
+  <img src="https://i.ibb.co.com/yPLC1kS/Screenshot-1167.png" alt="All Sports Equipment Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>Add Quires Page</strong>  
+  <strong>Order Property</strong>  
   <br>
-  <img src="https://i.ibb.co.com/cYCQnh4/Screenshot-1073.png" alt="Add Sports Equipment Page" width="80%" />
+  <img src="https://i.ibb.co.com/7JM5TfH/Screenshot-1168.png" alt="Add Sports Equipment Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>My Quires</strong>  
+  <strong>Add Review section</strong>  
   <br>
-  <img src="https://i.ibb.co.com/hFZ0XYN/Screenshot-1074.png" alt="View Details Equipment" width="80%" />
+  <img src="https://i.ibb.co.com/V9kYdFy/Screenshot-1170.png" alt="View Details Equipment" width="80%" />
 </p>
 
 <p align="center">
-  <strong>My Quires View Details</strong>  
+  <strong>User Order List</strong>  
   <br>
-  <img src="https://i.ibb.co.com/T2FHXW7/Screenshot-1075.png" alt="My Equipment List" width="80%" />
+  <img src="https://i.ibb.co.com/5nzCTxX/Screenshot-1171.png" alt="My Equipment List" width="80%" />
 </p>
 
 <p align="center">
-  <strong>My Recommend query</strong>  
+  <strong>User Review List</strong>  
   <br>
-  <img src="https://i.ibb.co.com/hcTm9sN/Screenshot-1076.png" alt="Update Equipment Page" width="80%" />
+  <img src="https://i.ibb.co.com/JkVjn4S/Screenshot-1172.png" alt="Update Equipment Page" width="80%" />
 </p>
 <p align="center">
-  <strong>All Recommend quires</strong>  
+  <strong>Become User to Agent</strong>  
   <br>
-  <img src="https://i.ibb.co.com/Gcyf7vY/Screenshot-1077.png" alt="Update Equipment Page" width="80%" />
+  <img src="https://i.ibb.co.com/Jz8btw8/Screenshot-1173.png" alt="Update Equipment Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>Registration Page</strong>  
+  <strong>Agent Add Property</strong>  
   <br>
-  <img src="https://i.ibb.co.com/Y2mYcBg/Screenshot-1078.png" alt="Register Page" width="80%" />
+  <img src="https://i.ibb.co.com/ysWT3mS/Screenshot-1174.png" alt="Register Page" width="80%" />
 </p>
 
+<p align="center">
+  <strong>Agent Added Property</strong>  
+  <br>
+  <img src="https://i.ibb.co.com/xC9j23m/Screenshot-1175.png" alt="Login page" width="80%" />
+</p>
+<p align="center">
+  <strong>Agent Sold Property</strong>  
+  <br>
+  <img src="https://i.ibb.co.com/vDNpzxz/Screenshot-1176.png" alt="Login page" width="80%" />
+</p>
+<p align="center">
+  <strong>Admin All Properties </strong>  
+  <br>
+  <img src="https://i.ibb.co.com/ykPXHLj/Screenshot-1177.png" alt="Login page" width="80%" />
+</p>
+<p align="center">
+  <strong>Admin Manage User </strong>  
+  <br>
+  <img src="https://i.ibb.co.com/HtYQF5P/Screenshot-1178.png" alt="Login page" width="80%" />
+</p>
+<p align="center">
+  <strong>Admin Update User Role </strong>  
+  <br>
+  <img src="https://i.ibb.co.com/SmcfmzM/Screenshot-1179.png" alt="Login page" width="80%" />
+</p>
+<p align="center">
+  <strong>Admin Manage All Review's </strong>  
+  <br>
+  <img src="https://i.ibb.co.com/m6zbYsq/Screenshot-1180.png" alt="Login page" width="80%" />
+</p>
+<p align="center">
+  <strong>Profile page</strong>  
+  <br>
+  <img src="https://i.ibb.co.com/BK9RmZq/Screenshot-1181.png" alt="Login page" width="80%" />
+</p>
 <p align="center">
   <strong>Login page</strong>  
   <br>
-  <img src="https://i.ibb.co.com/z2wq1Wc/Screenshot-1079.png" alt="Login page" width="80%" />
+  <img src="https://i.ibb.co.com/25hfGHW/Screenshot-1182.png" alt="Login page" width="80%" />
+</p>
+<p align="center">
+  <strong>SignUP page</strong>  
+  <br>
+  <img src="https://i.ibb.co.com/VWTzd7W/Screenshot-1183.png" alt="Login page" width="80%" />
 </p>
 
 # Features

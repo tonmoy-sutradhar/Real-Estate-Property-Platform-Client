@@ -65,7 +65,6 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Statistics />
-            {/* <AdminAddedproperty></AdminAddedproperty> */}
           </PrivateRoute>
         ),
       },
