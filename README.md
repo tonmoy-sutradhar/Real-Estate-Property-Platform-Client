@@ -10,7 +10,7 @@
 
 - Real Estate Property Platform(ELITE PROPERTY)
 
-This platform allows users to collaborate and explore product alternatives through queries and recommendations. Users can add, update, delete, and view queries, as well as provide and manage recommendations for various products. It features dynamic navigation, responsive design, and secure authentication using Firebase and JWT. The platform includes search functionality, toggling grid layouts, and interactive UI inspired by Envato and similar themes. Backend services are powered by Node.js, Express.js, and MongoDB, with deployment on Vercel. All sensitive credentials are secured via environment variables, ensuring a safe and robust application experience.
+The MERN stack Real Estate Property Platform(ELITE PROPERTY) supports three roles: user, agent, and admin. Users can purchase properties, leave reviews, and manage profiles, while agents add and track property listings. Admins oversee properties, users, and reviews for smooth operations. Key pages include a home page with advertisements and user reviews, detailed property pages with review functionality, and dedicated dashboards for each role. Authentication uses email/password or social login, with JWT tokens stored in localStorage. Interactive features include search, sorting, filtering, and Stripe integration for payments. The platform is fully responsive, with optional advanced features like property reporting and sales analytics.
 
 ## Authors
 
@@ -126,8 +126,8 @@ This platform allows users to collaborate and explore product alternatives throu
 
 #### Product Management:
 
-- Add, update, and delete sports equipment with customizable fields like rating, price, and stock quantity.
-- Logged-in users can view and manage their added equipment on a private "My Equipment List" page.
+- Add, update, and delete property with customizable fields like review, price, and Stock.
+- Logged-in users can view and manage their added Property on a private "My Added property List" page.
 
 #### Responsive Design:
 
@@ -140,8 +140,8 @@ This platform allows users to collaborate and explore product alternatives throu
 
 #### Modern UI Elements:
 
-- Interactive loading spinners, animated sliders, and additional meaningful sections on the homepage.
-- Integration of Lottie React and React Awesome Reveal for animations and React Tooltip for enhanced interactivity.
+- Interactive loading spinners, banner, and additional meaningful sections on the homepage.
+- Integration of toast React and React Awesome Reveal for animations and React Tooltip for enhanced interactivity.
 
 #### Error Handling and Feedback:
 
@@ -189,8 +189,8 @@ This platform allows users to collaborate and explore product alternatives throu
 #### Additional Tools:
 
 - Environment Variables: For securely storing Firebase and MongoDB credentials.
-- Toast/Sweet Alert: For displaying error and success messages.
-- Slider Libraries: For creating dynamic homepage banners.
+- React Toast: For displaying error and success messages.
+- Banner: For creating dynamic homepage banners.
 
 # Feedback
 
