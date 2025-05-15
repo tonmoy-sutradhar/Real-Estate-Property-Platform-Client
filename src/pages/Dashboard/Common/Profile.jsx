@@ -10,7 +10,7 @@ const Profile = () => {
   return (
     <div className="flex justify-center items-center mt-16">
       <Helmet>
-        <title>Profile</title>
+        <title>PROFILE</title>
       </Helmet>
       <div className="bg-white  rounded-2xl md:w-4/5 lg:w-3/5">
         <img
@@ -44,15 +44,6 @@ const Profile = () => {
                   <span className="font-bold text-blue-500 ">{user.email}</span>
                 </p>
               </div>
-
-              {/* <div>
-                <button className="bg-purple-500 px-10 py-1 rounded-lg text-white cursor-pointer hover:bg-lime-800 block mb-1">
-                  Update Profile
-                </button>
-                <button className="bg-purple-500 px-7 py-1 rounded-lg text-white cursor-pointer hover:bg-lime-800">
-                  Change Password
-                </button>
-              </div> */}
             </div>
           </div>
         </div>
