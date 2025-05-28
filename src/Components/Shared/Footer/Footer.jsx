@@ -148,7 +148,7 @@ const Footer = () => {
         <div className="mt-8 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p>
             &copy; ELITE PROPERTY | Designed by{" "}
-            <a href="#" className="text-black hover:underline">
+            <a href="#" className="text-white text-xl hover:underline">
               Tonmoy Sutradhar
             </a>
           </p>
